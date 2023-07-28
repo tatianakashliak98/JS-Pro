@@ -1,4 +1,3 @@
-
 const subjects = {
   mathematics: {
     students: 200,
@@ -29,8 +28,7 @@ createStringName();
 //     4. Создать массив из объектов предметов
 
 let arrSubjectsObjects = Object.values(subjects);
-console.log(arrSubjectsObjects)
-
+console.log(arrSubjectsObjects);
 
 //     2. Посчитать общее количнство студентов и учителей на всех предметах
 
@@ -46,21 +44,22 @@ getAmountStudAndSub();
 // 3. Получить среднее количество студентов на всех пердмета
 
 function getAverageNumberOfStudents() {
-    let averageNumberOfStudents = 0;
-    arrSubjectsObjects.forEach(function (item) {
-    averageNumberOfStudents += item.students/arrSubjectsObjects.length
+  let averageNumberOfStudents = 0;
+  arrSubjectsObjects.forEach(function (item) {
+    averageNumberOfStudents += item.students / arrSubjectsObjects.length;
   });
   console.log(averageNumberOfStudents);
 }
-getAverageNumberOfStudents()
-
+getAverageNumberOfStudents();
 
 //     5. Получить массив из предметов и отсортировать по количеству преподавателей на факультете от большего к меньшему
 
 function getArraySubjects() {
-    const subjectsArray = Object.entries(subjects).sort((a, b) => b[1].teachers - a[1].teachers)
-   console.log(subjectsArray)
+  const subjectsArray = Object.entries(subjects).sort(
+    (a, b) => b[1].teachers - a[1].teachers
+  );
+  let subjectsArrayString = [];
+  subjectsArray.forEach((item) => subjectsArrayString.push(item[0]));
+  console.log(subjectsArrayString);
 }
-getArraySubjects()
-
-
+getArraySubjects();
