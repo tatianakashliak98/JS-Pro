@@ -50,7 +50,7 @@ interface IMovie {
   actors: string[];
   plot: string;
   country: string;
-  poster:string| unknown;
+  poster:string;
   imdbRating: number;
   imdbVotes: number;
   type: string;
