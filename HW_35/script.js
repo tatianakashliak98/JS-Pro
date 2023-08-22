@@ -47,16 +47,18 @@ function countNumOfCars(array) {
 countNumOfCars(users);
 // 3. Создать функцию, которая бы принимала массив пользователей и отфильтровывала пользователей на наличие образования
 function filterArrayEducation(array) {
-    var arrFilterEducation = array.filter(function (item) {
-        return item.hasEducation === true;
+    var arrFilterEducation = array.filter(function (_a) {
+        var hasEducation = _a.hasEducation;
+        return hasEducation;
     });
     console.log(arrFilterEducation);
 }
 filterArrayEducation(users);
 // 4. Создать функцию, которая бы принимала массив пользователей и отфильтровывала пользователей на наличие животных
 function filterArrayAnimals(array) {
-    var arrFilterAnimals = array.filter(function (item) {
-        return item.animals;
+    var arrFilterAnimals = array.filter(function (_a) {
+        var animals = _a.animals;
+        return animals;
     });
     console.log(arrFilterAnimals);
 }
@@ -65,7 +67,7 @@ filterArrayAnimals(users);
 function getStringNameCars(array) {
     var nameCars = [];
     array.forEach(function (item) {
-        if (item.cars !== undefined) {
+        if (item.cars) {
             item.cars.forEach(function (el) { return nameCars.push(el); });
         }
     });

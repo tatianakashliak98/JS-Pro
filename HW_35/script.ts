@@ -44,6 +44,7 @@ function getStringNames<T extends MyUsers>(array: T[]): string[] {
   return stringNames;
 }
 getStringNames(users);
+
 // 2. Посчитать общее количество машин у пользователей
 function countNumOfCars<T extends MyUsers>(array: T[]) {
   let numOfCars: number = 0;
@@ -59,20 +60,15 @@ countNumOfCars(users);
 // 3. Создать функцию, которая бы принимала массив пользователей и отфильтровывала пользователей на наличие образования
 
 function filterArrayEducation<T extends MyUsers>(array: T[]){
-   let arrFilterEducation = array.filter((item: T) => {
-      return item.hasEducation === true;
-   })
-   console.log(arrFilterEducation)
+  let arrFilterEducation = array.filter(({ hasEducation }) => hasEducation)
+  console.log(arrFilterEducation)
 }
 filterArrayEducation(users)
 
 // 4. Создать функцию, которая бы принимала массив пользователей и отфильтровывала пользователей на наличие животных
 
 function filterArrayAnimals<T extends MyUsers>(array: T[]) {
-   let arrFilterAnimals=array.filter((item: T) => {
-     return item.animals
-     
-   })
+   let arrFilterAnimals=array.filter(({animals}) => animals)
    console.log(arrFilterAnimals)
       
 }
@@ -83,7 +79,7 @@ filterArrayAnimals(users)
 function getStringNameCars<T extends MyUsers>(array: T[]) {
    let nameCars: string[] = [];
    array.forEach((item: T) => {
-      if (item.cars !== undefined) {
+      if (item.cars) {
          item.cars.forEach((el)=> nameCars.push(el))
       }
    })
