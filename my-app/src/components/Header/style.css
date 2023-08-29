@@ -15,6 +15,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: rgb(28, 28, 211);
+color: white;
 }
 
 .header__search {
