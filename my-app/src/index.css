@@ -10,7 +10,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 * {
-  background-color: aliceblue;
   box-sizing: border-box;
 }
 button,
@@ -29,9 +28,9 @@ html,
   width: 100%;
   height: 100%;
 }
-#root {
-  display: flex;
+/* #root {
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: rgb(237, 235, 231);
-}
+  align-items: center; */
+  /* background-color: rgb(237, 235, 231); */
+/* } */ 
