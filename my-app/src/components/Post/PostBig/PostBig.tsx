@@ -4,8 +4,8 @@ import "./style.css"
 
 const PostBig: FC<IPost> = ({ title, date, image, description, id }) => {
    return (
-      <li id={`${id}`} className='post__container-big'>
-         {image ? <img className='post-big__img' src={image} alt="img" /> : ""}
+      <li  className='post__container-big'>
+         {image && <img className='post-big__img' src={image} alt="img" />}
          <div className='post__date'>{date}</div>
          <h2 className='post__title-big'>{title}</h2>
          <div className='post__text-big'>{description}</div>
