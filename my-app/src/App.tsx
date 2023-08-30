@@ -8,14 +8,16 @@ import { title } from "process";
 import SignIn from "./components/SignIn/SignIn";
 import Success from "./components/Success/Success";
 import SelectedPost from "./components/SelectedPost/SelectedPost";
+import SignUp from "./components/SignUp/SignUp";
 
 function App() {
   return (
     <>
-      <PageTemplate title=''>
+      <PageTemplate title='Sign Up'>
         {/* <SignIn/> */}
         {/* <Success/> */}
-        <SelectedPost/>
+        <SignUp/>
+        {/* <SelectedPost/> */}
       </PageTemplate>
     </>
   );

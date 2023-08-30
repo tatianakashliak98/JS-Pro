@@ -3,6 +3,7 @@ import Input  from '../Input/Input'
 import PageTemplate from '../PageTemplate/PageTemplate'
 import "./SignIn.css"
 import ButtonSign from '../ButtonSign/ButtonSign'
+import { StyledForm } from './Styled'
 
 const SignIn = () => {
    const [isSignIn, setSignIn] = useState(false)
@@ -12,19 +13,13 @@ const SignIn = () => {
       console.log(123)
    }
    return (
-         <form>
+         <StyledForm>
             <Input type='text' placeholder='Your Email' label='Email' value={email} onChange={setEmail} />
             <Input type='password' placeholder='Your password' label='Password' value={password} onChange={setPassword}/>
             <ButtonSign titleButton='Sign In' onClick={handleClick} />
-         </form>
+         </StyledForm>
 
 
    )
 }
-{/* <PageTemplate title='Success'>
-                  <form>
-                     <span className='SuccessEmail'>Email Confirmed</span>
-                     <ButtonSign titleButton='Sign In' onClick={() => setSignIn(prevState => !prevState)} />
-                  </form>
-               </PageTemplate> */}
 export default SignIn
