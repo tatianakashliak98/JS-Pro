@@ -1,0 +1,31 @@
+.burger {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 50px;
+   padding-bottom: 8px;
+   cursor: pointer;
+   width: 7.5%;
+   position: relative;
+}
+.burger__opened {
+   width: 100%;
+   height: 50px;
+   color: white;
+   display: flex;
+   align-items: center;
+}
+.burger__opened {
+   display: none;
+   width: 180px;
+   text-align: center;
+   justify-content: center;
+ }
+ .visible {
+   position: absolute;
+   display: flex;
+   top: 50px;
+   left: 0;
+   font-size: 14px;
+ }

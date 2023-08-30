@@ -1,0 +1,55 @@
+button,input {
+   padding: 0;
+   border: none;
+   font: inherit;
+   border: none;
+   list-style: none;
+   outline: 0;
+   background-color: transparent;
+   color: white;
+}
+.header__wrapper {
+width: 100%;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(28, 28, 211);
+color: white;
+}
+
+.header__search {
+   width: 70%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.184);
+}
+.header__button-search {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width: 7.5%;
+   font-size: 30px;
+   cursor: pointer;
+   border-right: 0.5px solid white;
+}
+.header__input {
+   height: 100%;
+   width: 90%;
+}
+.search__clean {
+   width: 10%;
+   height: 100%;
+   cursor: pointer;
+}
+.user {
+   color: aliceblue;
+   background-color: rgb(28, 28, 211);
+   font-weight: 500;
+   font-size: 14px;
+   width: 180px;
+}
+.user__icon {
+   background-color: rgba(255, 255, 255, 0.184);
+   padding: 5px;
+}
