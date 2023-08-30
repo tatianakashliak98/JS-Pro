@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import "./style.css"
-import TabsContainer from '../TabsContainer/TabsContainer'
+import TabsContainer from '../TabsContainer'
 // interface ITabs{
 //    text: string,
 //    children: ReactNode,

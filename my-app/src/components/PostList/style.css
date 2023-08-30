@@ -1,0 +1,30 @@
+.posts__container {
+   width: 100%;
+   max-width: 1170px;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 70% 10% 20%;
+   grid-template-rows: 1 1 1;
+   padding: 50px;
+   gap: 10px;
+   margin: 10px;
+}
+.posts__container-middle {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 1 1;
+   grid-column-start: 1;
+   grid-column-end: 3;
+   grid-row-start: 2;
+   grid-row-end: 4;
+   gap: 10px;
+}
+
+.posts__container-smoll {
+   height: 100%;
+   grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 1;
+   grid-row-end: 4;
+   margin-left: 10px;
+}

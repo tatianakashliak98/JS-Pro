@@ -1,0 +1,15 @@
+.post__container {
+   display: flex;
+   flex-direction: column;
+}
+.post__img {
+   width: 40%;
+}
+.post__date {
+   font-size: 8px;
+   color: gray;
+}
+.post__text {
+   font-size: 8px;
+   color: gray;
+}
