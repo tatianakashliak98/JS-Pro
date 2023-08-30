@@ -5,6 +5,7 @@ import "./SignIn.css"
 import ButtonSign from '../ButtonSign/ButtonSign'
 import { StyledForm } from './Styled'
 
+
 const SignIn = () => {
    const [isSignIn, setSignIn] = useState(false)
    const [email, setEmail] = useState('')
@@ -13,6 +14,7 @@ const SignIn = () => {
       console.log(123)
    }
    return (
+
          <StyledForm>
             <Input type='text' placeholder='Your Email' label='Email' value={email} onChange={setEmail} />
             <Input type='password' placeholder='Your password' label='Password' value={password} onChange={setPassword}/>
@@ -20,6 +22,8 @@ const SignIn = () => {
          </StyledForm>
 
 
+
    )
 }
+
 export default SignIn

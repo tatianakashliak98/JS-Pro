@@ -20,7 +20,11 @@ const PostList = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
 
 
-  const backFunc = () => {
+
+
+  const getPosts = () => {
+
+
     fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11')
       .then((response) => response.json())
       .then((data) => {
@@ -31,9 +35,13 @@ const PostList = () => {
         console.log(err.message)
       });
   };
-  useEffect(() => {
-    return backFunc
-  }, [])
+
+
+  useEffect(() =>
+    getPosts,
+    [])
+
+
   return (
 
     <div className='posts__container'>

@@ -1,3 +1,4 @@
+
 import React , { useState }from 'react'
 import PageTemplate from '../PageTemplate/PageTemplate'
 import Input from '../Input/Input'
@@ -21,6 +22,7 @@ const SignUp = () => {
         <Input type='password' label='Confirm password' placeholder='Confirm Password' value={confirmPassword} onChange={SetconfirmPassword}/>
         <ButtonSign titleButton='Sign Up' onClick={handleClick} />
       </StyledForm>
+
 
 
   )
