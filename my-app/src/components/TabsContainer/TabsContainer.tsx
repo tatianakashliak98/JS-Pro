@@ -1,6 +1,6 @@
 import React from 'react'
 import "./style.css"
-import Tab from '../Tab/Tab'
+import Tab from './Tab/Tab'
 
 const TabsContainer = () => {
   return (

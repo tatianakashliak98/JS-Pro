@@ -8,6 +8,7 @@
    cursor: pointer;
    width: 7.5%;
    position: relative;
+   color: white;
 }
 .burger__opened {
    width: 100%;
