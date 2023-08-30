@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react'
+import React, {ReactNode, FC} from 'react'
 import "./style.css"
 
 interface IBurgerMenu {
@@ -7,7 +7,7 @@ interface IBurgerMenu {
    children: ReactNode,
    onClick:()=>void
 }
-const BurgerMenu = ({text,customClass, children,onClick}:IBurgerMenu) => {
+const BurgerMenu: FC<IBurgerMenu> = ({text,customClass, children,onClick}) => {
   return (
       <button className={customClass} onClick={onClick}>
         {text}
