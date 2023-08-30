@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./components/Title";
 import Header from "./components/Header";
+
 import Tabs from "./components/TabsContainer/Tabs/Tabs";
 import PostList from "./components/PostList/PostList";
 import PageTemplate from "./components/PageTemplate/PageTemplate";
