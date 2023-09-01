@@ -5,6 +5,7 @@ import "./style.css"
 const PostBig: FC<IPost> = ({ title, date, image, description, id }) => {
    return (
 
+
       <li  className='post__container-big'>
          {image && <img className='post-big__img' src={image} alt="img" />}
 

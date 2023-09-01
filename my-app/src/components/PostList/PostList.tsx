@@ -21,7 +21,9 @@ const PostList = () => {
 
 
 
+
   const getPosts = () => {
+
 
     fetch('https://studapi.teachmeskills.by/blog/posts/?limit=11')
       .then((response) => response.json())
@@ -34,9 +36,11 @@ const PostList = () => {
       });
   };
 
+
   useEffect(() =>
     getPosts,
     [])
+
 
   return (
 

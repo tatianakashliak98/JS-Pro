@@ -10,6 +10,7 @@ const Post = ({ title, date, image, description, id }: IPost) => {
       <li className='post__container'>
          <div className='post__date'>{date}</div>
 
+
          {image && <img className='post__img' src={image} alt="img" />}
 
          <h2 className='post__title'>{title}</h2>
