@@ -5,9 +5,10 @@ interface IInput {
    label: string,
    placeholder: string,
    value:string,
-   onChange:(value:string)=>void,
+   onChange: (value: string) => void,
+   customClass?:string,
 }
-const Input: FC<IInput> = ({ type, label, placeholder,value, onChange }) => {
+const Input: FC<IInput> = ({ type, label, placeholder,value, onChange,customClass }) => {
    const [inputValue, setInputValue] = useState('');
    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       setInputValue(event.currentTarget.value)
@@ -16,7 +17,7 @@ const Input: FC<IInput> = ({ type, label, placeholder,value, onChange }) => {
    return (
       <>
          <span>{label}</span>
-         <StyledInput type={type} placeholder={placeholder} value={value} onChange={(e)=>onChange(e.currentTarget.value)}>
+         <StyledInput className={customClass} type={type} placeholder={placeholder} value={value} onChange={(e)=>onChange(e.currentTarget.value)}>
          </StyledInput>
       </>
    )

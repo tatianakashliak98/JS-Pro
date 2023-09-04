@@ -1,9 +1,0 @@
-form {
-   display: flex;
-   flex-direction: column;
-   padding: 30px;
-   border: 1px solid gray;
-}
-.SuccessEmail{
-   padding-bottom: 20px;
-}
