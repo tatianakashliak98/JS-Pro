@@ -1,5 +1,7 @@
 import React, { FC, useState } from 'react'
+
 import { StyledInput } from './Styled';
+
 interface IInput {
    type: 'password' | 'text',
    label: string,
@@ -19,6 +21,7 @@ const Input: FC<IInput> = ({ type, label, placeholder,value, onChange,customClas
          <span>{label}</span>
          <StyledInput className={customClass} type={type} placeholder={placeholder} value={value} onChange={(e)=>onChange(e.currentTarget.value)}>
          </StyledInput>
+
       </>
    )
 }

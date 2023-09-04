@@ -1,8 +1,10 @@
 import React, { createContext, useState } from "react";
 import Title from "./components/Title";
 import Header from "./components/Header";
+
 import Tabs from "./Pages/TabsContainer/Tabs/Tabs";
 import PostList from "./Pages/PostList/PostList";
+
 import PageTemplate from "./components/PageTemplate/PageTemplate";
 import { title } from "process";
 import SignIn from "./Pages/SignIn/SignIn";
@@ -100,10 +102,15 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       {/* <Navigate to='posts' /> */}
-      {location.pathname === '/' && <Navigate to='posts'/>}
-    </>
-    // // </ThemeContext.Provider>  
-    // <>
+      {/* {location.pathname === '/' && <Navigate to='posts'/>} */}
+</>
+   
+  );
+}
+
+export default App
+ {/* </ThemeContext.Provider>   */}
+    {/* // <>
     //   <div>
     //     <button onClick={() => navigate('/users', { state: { someDate: 'passed from props' } })}>go to users</button>
     //     <br />
@@ -115,8 +122,4 @@ function App() {
       //   <Route path="/posts" element={<Posts />} />
       //   <PrivateRoute/>
       // </Routes>
-    // </>
-  );
-}
-
-export default App
+    // </> */}
