@@ -1,0 +1,38 @@
+.posts__container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   flex-grow: 1;
+   
+   
+}
+.posts-container__left{
+   width: 70%;
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 2%;
+   flex-grow: 1;
+}
+.posts-container__right {
+   width: 30%;
+
+}
+.post-container__left {
+   width: 45%;
+   height: 33.33%;
+   display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom:1px solid gray ;
+    margin: 10px;
+    
+}
+.post-container__right {
+   width: 96%;
+   height: 16.66%;
+   border-bottom:1px solid gray ;
+   margin: 10px;
+}

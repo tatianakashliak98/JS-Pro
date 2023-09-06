@@ -1,4 +1,5 @@
-import React, {FC, ReactNode, useState } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
+import { Routes, Route, Link, NavLink, useNavigate, useLocation, useParams, Navigate } from "react-router-dom";
 import Header from '../Header/Header'
 import "./style.css"
 interface IPageTemplate{
@@ -6,13 +7,13 @@ interface IPageTemplate{
    children?: ReactNode,
 }
 const PageTemplate: (FC<IPageTemplate>) = ({ title, children }) => {
-   
+   const navigate = useNavigate();
    const [isDark, setIsDark] = useState(false)
    return (
       <div className={`PageTemplate ${isDark ? 'dark' : ''}`}>
         <Header />
         <main >
-           <a href="#">Back to home</a>
+           <a onClick={()=>navigate('/posts')}>Back to home</a>
            <div className='title-wrapper'>
               <h1>{title}</h1>
               <button onClick={()=>setIsDark(prevState=>!prevState)}>Toggle theme</button>
