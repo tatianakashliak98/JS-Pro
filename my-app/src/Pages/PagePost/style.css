@@ -1,0 +1,26 @@
+.post__selected {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.post-container__selected {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.post__selected-nav {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 40px;
+}
+.post-selected__button {
+   display: block;
+   cursor: pointer;
+}
+.post-selected__button:hover {
+   color: blue;
+}

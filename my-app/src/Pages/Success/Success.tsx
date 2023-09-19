@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import ButtonSign from '../../components/ButtonSign/ButtonSign'
 // import { ThemeContext } from '../../App'
 import { StyledContainer } from './styled'
-import { StyledForm } from '../SignIn/Styled'
 import PageTemplate from '../../components/PageTemplate/PageTemplate'
+import { StyledForm } from '../SignIn/Styled'
 const Success = () => {
    // const { theme, toggleTheme } = useContext(ThemeContext)
 

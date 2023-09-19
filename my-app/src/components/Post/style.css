@@ -9,4 +9,5 @@
 .post__text {
    font-size: 8px;
    color: gray;
+   display: none;
 }

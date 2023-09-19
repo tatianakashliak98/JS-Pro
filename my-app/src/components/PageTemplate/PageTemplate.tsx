@@ -1,37 +1,38 @@
-import React, { FC, ReactNode, useState } from 'react'
-import { Routes, Route, Link, NavLink, useNavigate, useLocation, useParams, Navigate } from "react-router-dom";
+import  { FC, ReactNode} from 'react'
+import {useNavigate} from "react-router-dom";
 import Header from '../Header/Header'
 import "./style.css"
+import { useSelector} from 'react-redux';
+import { StyledPageTemplate } from './StyledPageTemplate';
+import Loader from '../Loader/Loader';
 interface IPageTemplate{
    title: string,
    children?: ReactNode,
 }
 const PageTemplate: (FC<IPageTemplate>) = ({ title, children }) => {
    const navigate = useNavigate();
-   const [isDark, setIsDark] = useState(false)
+   const theme = useSelector(({theme})=>theme);
+   const isLoading = useSelector(({isLoading}) => isLoading)
    return (
-      <div className={`PageTemplate ${isDark ? 'dark' : ''}`}>
+      <StyledPageTemplate theme={theme}>
         <Header />
         <main >
            <a onClick={()=>navigate('/posts')}>Back to home</a>
            <div className='title-wrapper'>
               <h1>{title}</h1>
-              <button onClick={()=>setIsDark(prevState=>!prevState)}>Toggle theme</button>
            
            </div>
            
-           <div className='conten'>
-               {children}
-           </div>
-           
+           <div className='conten'> 
+               {isLoading ? <Loader/> : children}
+           </div>  
         </main>
         <footer>
            <span>2022</span>
            <span>all right reserved </span>
         </footer>
         
-    </div>
+    </StyledPageTemplate>
   )
 }
-
 export default PageTemplate

@@ -7,6 +7,7 @@ import Input from '../Input/Input';
 import Post from '../Post/Post';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import './style.css'
+import instance from '../../axiosConfig';
 
 const SearchPage = () => {
    const [dataSearch, setDataSearch] = useState("");
@@ -34,7 +35,8 @@ const SearchPage = () => {
 
    let searchPosts = posts.filter((post) => {
       return post.title.toLowerCase().includes(dataSearch);
-    });
+   });
+   // useEffect(()=> instance.get(`/blog/posts/?search=${searchPosts}`) ,[dataSearch])
   return (
     <div className={`PageTemplate ${isDark ? 'dark' : ''}`}>
     <div className='header__wrapper'>
