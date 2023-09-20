@@ -1,12 +1,13 @@
 import React, { ReactNode } from 'react'
 interface ITab {
    text: string;
-   customClass: string,
+   customClass?: string,
    children?: ReactNode,
+   onClick?: () => void;
 }
-const Tab = ({ text, customClass, children }: ITab) => {
+const Tab = ({ text, customClass, children,onClick }: ITab) => {
    return (
-      <div className={customClass}>
+      <div onClick={onClick} className= {`tab_container ${customClass}`}>
          {text}
          {children}
       </div>
